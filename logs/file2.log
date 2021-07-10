@@ -1,0 +1,11 @@
+2021-07-10 15:36:44,478 [main] INFO  c.e.d.DemoLog4jAdditivityApplicationTests - Starting DemoLog4jAdditivityApplicationTests using Java 1.8.0-262 on DESKTOP-QF8U38Q with PID 14872 (started by iauli in E:\Milandr\demo-log4j-additivity)
+2021-07-10 15:36:44,503 [main] INFO  c.e.d.DemoLog4jAdditivityApplicationTests - No active profile set, falling back to default profiles: default
+2021-07-10 15:36:45,482 [main] INFO  c.e.d.DemoLog4jAdditivityApplicationTests - Started DemoLog4jAdditivityApplicationTests in 1.169 seconds (JVM running for 2.0)
+2021-07-10 15:36:54,882 [main] INFO  c.e.d.DemoLog4jAdditivityApplication - Starting DemoLog4jAdditivityApplication using Java 1.8.0-262 on DESKTOP-QF8U38Q with PID 12760 (E:\Milandr\demo-log4j-additivity\target\classes started by iauli in E:\Milandr\demo-log4j-additivity)
+2021-07-10 15:36:54,884 [main] INFO  c.e.d.DemoLog4jAdditivityApplication - No active profile set, falling back to default profiles: default
+2021-07-10 15:36:55,726 [main] INFO  c.e.d.DemoLog4jAdditivityApplication - Started DemoLog4jAdditivityApplication in 1.087 seconds (JVM running for 1.671)
+2021-07-10 15:37:22,404 [http-nio-8000-exec-1] INFO  c.e.d.HelloControllerL3 - Hello from controller on L3
+2021-07-10 15:38:46,705 [main] INFO  c.e.DemoLog4jAdditivityApplication - Starting DemoLog4jAdditivityApplication using Java 1.8.0-262 on DESKTOP-QF8U38Q with PID 15056 (E:\Milandr\demo-log4j-additivity\target\classes started by iauli in E:\Milandr\demo-log4j-additivity)
+2021-07-10 15:38:46,706 [main] INFO  c.e.DemoLog4jAdditivityApplication - No active profile set, falling back to default profiles: default
+2021-07-10 15:38:47,506 [main] INFO  c.e.DemoLog4jAdditivityApplication - Started DemoLog4jAdditivityApplication in 1.04 seconds (JVM running for 1.623)
+2021-07-10 15:39:12,442 [http-nio-8000-exec-1] INFO  com.example.HelloControllerL2 - Hello from controller on L2

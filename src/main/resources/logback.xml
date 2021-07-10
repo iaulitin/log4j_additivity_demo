@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="file1" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/file1.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/file1-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>20</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="file2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/file2.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/file2-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>20</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="file3" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/file3.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/file3-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>20</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!--Level 0-->
+    <root level="info">
+        <appender-ref ref="console"/>
+        <appender-ref ref="file1"/>
+    </root>
+
+    <!--Level 2-->
+    <!--Логи из пакета com.example не будут попадать в root-->
+    <logger name="com.example" level="INFO" additivity="false">
+        <appender-ref ref="file2"/>
+    </logger>
+
+    <!--Level 3-->
+    <!--Логи из пакета com.example.l3 будут попадать в logger "com.example", но не будут попадать в root-->
+    <logger name="com.example.l3" level="INFO" additivity="true">
+        <appender-ref ref="file3"/>
+    </logger>
+
+</configuration>
